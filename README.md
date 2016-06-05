@@ -3,12 +3,12 @@ Boilerplate that handles Node.js environment set up so you can start developing 
 
 ###What You Get
 * React, React-DOM, React-Router
-* Redux, Redux-Promise
+* Redux, Redux-Promise, Redux-Form
 * Babel
 * Webpack
 * Axios
 * jQuery
-* Bootstrap
+* Materialize
 * Lodash
 * Mocha
 * Chai
