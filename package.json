@@ -1,9 +1,9 @@
 {
-  "name": "react_boilerplate",
+  "name": "pleasant_ghost",
   "version": "1.0.0",
-  "description": "Starter for a React, Redux, Babel, and Webpack environment",
+  "description": "Handles environment behind the scenes so you don't have to.",
   "main": "index.js",
-  "repository": "",
+  "repository": "git@github.com:jaredmurphy/pleasant_ghost.git",
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js",
     "test": "mocha --compilers js:babel-core/register --require ./test/test_helper.js --recursive ./test",
@@ -28,6 +28,7 @@
   "dependencies": {
     "axios": "^0.12.0",
     "babel-preset-stage-1": "^6.1.18",
+    "bootstrap": "^3.3.6",
     "lodash": "^3.10.1",
     "react": "^0.14.3",
     "react-dom": "^0.14.3",

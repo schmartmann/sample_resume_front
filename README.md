@@ -1,23 +1,24 @@
-#REACT BOILERPLATE
+#Pleasant Ghost
+Boilerplate that handles Node.js environment set up so you can start developing NOW.
 
-Takes care of handing your environment for front end Node.js apps.
-
-###What You Get###
-######Support For:######
-* React & React DOM
-* React-Router
-* Redux
-* Redux-Promise
-* Babel to handle your JSX and ES6
+###What You Get
+* React, React-DOM, React-Router
+* Redux, Redux-Promise
+* Babel
 * Webpack
-* Lodash
 * Axios
+* jQuery
+* Bootstrap
+* Lodash
+* Mocha
+* Chai
 
-###Usage###
-- Clone the repo
-- run <npm install>
-- run <npm start>
-- Checkout your localhost:8080 and you should have your first React component rendered on the page!
+###Usage
+- Clone this repo
+- npm install
+- npm start
+- Go to localhost:8080
+- See your first working React component in action
 
-###Contribute###
-Please fork, make changes, and submit a pull request.
+###Contribute
+Fork, make changes, submit pull request.
