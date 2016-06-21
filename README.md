@@ -1,5 +1,5 @@
 #Pleasant Ghost
-Boilerplate that handles Node.js environment set up so you can start developing NOW.
+Boilerplate that handles Node.js environment set up so you can start developing your front end NOW.
 
 ###What You Get
 * React, React-DOM, React-Router
