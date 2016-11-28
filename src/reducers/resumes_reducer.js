@@ -20,10 +20,10 @@ export default function(state = INITIAL_STATE, action){
         user_phone: user_profile.user_phone,
         user_email: user_profile.user_email,
         job_objective: user_profile.job_objective,
-        user_skills: user_profile.user_skills,
-        employment_history_1: user_profile.employment_history_1,
-        employment_history_2: user_profile.employment_history_2,
-        education: user_profile.education
+        user_skills: user_profile.user_skills.split(/(Project Management: )/),
+        employment_history_1: user_profile.employment_history_1.split(","),
+        employment_history_2: user_profile.employment_history_2.split(","),
+        education: user_profile.education.split(",")
       }
       default:
       console.log("no resume loaded")

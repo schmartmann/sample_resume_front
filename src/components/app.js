@@ -4,6 +4,9 @@ import { bindActionCreators } from 'redux';
 import { fetchResume } from '../actions/index';
 import thunk from 'redux-thunk';
 
+import WorkHistory from "./work_history"
+import Education from "./education"
+import Skills from "./skills"
 
 function mapStateToProps(state){
   return {
@@ -21,17 +24,16 @@ function mapDispatchToProps(dispatch){
 
 class App extends Component {
   constructor(props){
-    super(props)
-    // this.state = {
-    //   user_email: "",
-    //   password: "",
-    //   emailWarning: false,
-    //   passwordWarning: false};
-  }
+    super(props);
+  };
   componentWillMount(){
-    console.log("componentWillMount firing")
-    this.props.fetchResume()
-  }
+    this.props.fetchResume();
+    this.skillsList();
+  };
+  skillsList(){
+    var skillsList = [];
+    console.log("skillsList firing :", this.props)
+  };
   render() {
     return (
       <div>
@@ -58,33 +60,15 @@ class App extends Component {
         <blockquote>
           {this.props.resume.job_objective}
         </blockquote>
-        <h4>
-          Skills
-        </h4>
-        <p>
-          {this.props.resume.user_skills}
-        </p>
-        <h4>
-          Work History
-        </h4>
-        <ul>
-          <li>
-            {this.props.resume.employment_history_1}
-          </li>
-        </ul>
-        <ul>
-          <li>
-            {this.props.resume.employment_history_2}
-          </li>
-        </ul>
-        <h4>
-          Education
-        </h4>
-        <ul>
-          <li>
-            {this.props.resume.education}
-          </li>
-        </ul>
+        <div className="skills">
+          <Skills/>
+        </div>
+        <div className="work-history">
+          <WorkHistory/>
+        </div>
+        <div className="education">
+          <Education/>
+        </div>
       </div>
     );
   }
