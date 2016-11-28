@@ -9,6 +9,7 @@ body {
 
 .container {
   background: #C7DBE3;
+  height: 80%;
 }
 
 .logo {
@@ -53,6 +54,7 @@ a {
   font-size: 20px;
   margin: 0em -1.5em;
 }
+
 img {
   border-radius: 50%;
   width: 250px;
@@ -103,4 +105,51 @@ img {
   padding-top: 2em;
   text-align: center;
   font-size: 10px;
+}
+
+@media only screen and (min-width: 0px) and (max-width: 414px) {
+
+  .nav {
+    margin: 0em auto;
+    height: 30%;
+  }
+
+  .active {
+    height: 55px;
+    width: 55px;
+  }
+
+  .nav li {
+    height: 55px;
+    width: 55px;
+  }
+
+  .nav a {
+    font-size: 9px;
+    text-align: center;
+  }
+
+  img {
+    width: 100px;
+  }
+
+li[className^="active"]{
+    background-color: #337ab7;
+  }
+
+  .jumbotron blockquote {
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  .skills li {
+    font-size: 20px;
+    margin: 0em auto;
+  }
+
+  .card li {
+    font-size: 18px;
+    text-align: left;
+    margin: 0px auto;
+  }
 }
