@@ -3,6 +3,7 @@ import axios from 'axios';
 const ROOT_URL = 'http://localhost:3000'
 
 export const FETCH_RESUME = "FETCH_SCRIPT";
+export const LOAD_RESUME = "LOAD_RESUME";
 
 export function fetchResumeOptimistic(props){
   return {
