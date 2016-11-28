@@ -1,7 +1,8 @@
 import { combineReducers } from 'redux';
+import ResumesReducer from './resumes_reducer';
+
 
 const rootReducer = combineReducers({
-  state: (state = {}) => state
-});
-
+  resume: ResumesReducer
+})
 export default rootReducer;
