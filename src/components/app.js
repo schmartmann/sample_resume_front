@@ -7,6 +7,9 @@ import thunk from 'redux-thunk';
 import WorkHistory from "./work_history"
 import Education from "./education"
 import Skills from "./skills"
+import Contact from "./contact"
+import Title from "./title"
+import Objective from "./objective"
 
 function mapStateToProps(state){
   return {
@@ -28,38 +31,19 @@ class App extends Component {
   };
   componentWillMount(){
     this.props.fetchResume();
-    this.skillsList();
-  };
-  skillsList(){
-    var skillsList = [];
-    console.log("skillsList firing :", this.props)
   };
   render() {
     return (
       <div>
-        <h1>
-          {this.props.resume.user_name}
-        </h1>
-        <h4>
-          Contact Information
-        </h4>
-        <ul>
-          <li>
-            Name: {this.props.resume.user_name}
-          </li>
-          <li>
-            Phone: {this.props.resume.user_phone}
-          </li>
-          <li>
-            Email: {this.props.resume.user_email}
-          </li>
-        </ul>
-        <h4>
-          Job Objective:
-        </h4>
-        <blockquote>
-          {this.props.resume.job_objective}
-        </blockquote>
+        <div className="title">
+          <Title/>
+        </div>
+        <div className="contact">
+          <Contact/>
+        </div>
+        <div className="objective">
+          <Objective/>
+        </div>
         <div className="skills">
           <Skills/>
         </div>
