@@ -13,12 +13,11 @@ export function fetchResumeOptimistic(props){
 
 export function fetchResume(){
   return function(dispatch){
-
   axios({
     method: 'get',
     url: `${ROOT_URL}/api/v1/resumes`,
     headers: {'X-Requested-With': 'XMLHttpRequest'},
-    crossDomain: true,
+    crossDomain: true
   }).then(response => {
     console.log(response)
     let props = response.data[0]
