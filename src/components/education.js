@@ -15,14 +15,25 @@ function mapStateToProps(state){
 class Education extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      revealEducation: false
+    }
+    this.revealEducation = this.revealEducation.bind(this);
+    this.hideEducation = this.hideEducation.bind(this);
+  };
+  revealEducation(){
+    this.setState({revealEducation: true})
+  };
+  hideEducation(){
+    this.setState({revealEducation: false})
   };
   render(){
     return(
-      <div>
-        <h4>
+      <div className="card">
+        <h4 onClick={this.state.revealEducation? this.hideEducation : this.revealEducation}>
           Education
         </h4>
-        <ul>
+        <ul className={this.state.revealEducation? "" : "education-hide"}>
           <li>
             {this.props.resume.education[0]}
           </li>

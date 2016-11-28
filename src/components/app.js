@@ -10,6 +10,8 @@ import Skills from "./skills"
 import Contact from "./contact"
 import Title from "./title"
 import Objective from "./objective"
+import Logo from "./logo"
+import Footer from "./footer"
 
 function mapStateToProps(state){
   return {
@@ -35,23 +37,39 @@ class App extends Component {
   render() {
     return (
       <div>
-        <div className="title">
-          <Title/>
+        <div className="logo">
+          <Logo/>
         </div>
-        <div className="contact">
-          <Contact/>
+        <div className="jumbotron">
+            <div className="title">
+              <Title/>
+            </div>
+            <div className="objective lead">
+              <Objective/>
+            </div>
+            <div className="skills lead">
+              <Skills/>
+            </div>
         </div>
-        <div className="objective">
-          <Objective/>
+        <div className="row">
+          <div className="col-lg-12">
+            <div className="work-history">
+              <WorkHistory/>
+            </div>
+          </div>
+          <div className="col-lg-12">
+            <div className="education">
+              <Education/>
+            </div>
+          </div>
+          <div className="col-lg-12">
+            <div className="contact">
+              <Contact/>
+            </div>
+          </div>
         </div>
-        <div className="skills">
-          <Skills/>
-        </div>
-        <div className="work-history">
-          <WorkHistory/>
-        </div>
-        <div className="education">
-          <Education/>
+        <div className="footer">
+          <Footer/>
         </div>
       </div>
     );

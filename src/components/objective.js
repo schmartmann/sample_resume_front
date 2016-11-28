@@ -19,8 +19,8 @@ class Objective extends Component {
   render(){
     return(
       <div>
-        <h4>
-          Job Objective:
+        <h4 className="h4-obj">
+          Job Objective
         </h4>
         <blockquote>
           {this.props.resume.job_objective}
