@@ -30,7 +30,18 @@ function mapDispatchToProps(dispatch){
 class App extends Component {
   constructor(props){
     super(props);
+    this.state = {
+      revealResume: false
+    };
+    this.revealResume = this.revealResume.bind(this);
+    this.hideResume = this.hideResume.bind(this);
   };
+  revealResume(){
+    this.setState({revealResume: true})
+  };
+  hideResume(){
+    this.setState({revealResume: false})
+  }
   componentWillMount(){
     this.props.fetchResume();
   };
@@ -40,7 +51,7 @@ class App extends Component {
         <div className="logo">
           <Logo/>
         </div>
-        <div className="jumbotron">
+        <div className="jumbotron" onClick={this.state.revealResume? this.hideResume : this.revealResume}>
             <div className="title">
               <Title/>
             </div>
@@ -51,22 +62,24 @@ class App extends Component {
               <Skills/>
             </div>
         </div>
-        <div className="row">
-          <div className="col-lg-12">
-            <div className="work-history">
-              <WorkHistory/>
+        <div className={this.state.revealResume? "" : "resume-hide"}>
+          <div className="row">
+            <div className="col-lg-12">
+              <div className="work-history">
+                <WorkHistory/>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-12">
-            <div className="education">
-              <Education/>
+            <div className="col-lg-12">
+              <div className="education">
+                <Education/>
+              </div>
             </div>
-          </div>
-          <div className="col-lg-12">
-            <div className="contact">
-              <Contact/>
+            <div className="col-lg-12">
+              <div className="contact">
+                <Contact/>
+              </div>
             </div>
-          </div>
+            </div>
         </div>
         <div className="footer">
           <Footer/>
